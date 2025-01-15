@@ -16,7 +16,7 @@ return (
       initial={{opacity: 0, filter: 'blur(0px)'}}
       animate={{opacity: 1, filter: 'blur(5px)'}}
       exit={{opacity: 0, filter: 'blur(0px)'}}
-	    transition={{
+      transition={{
       duration: 0.5,
       ease: [1, 1, 0.58, 1],
       delay: 1
