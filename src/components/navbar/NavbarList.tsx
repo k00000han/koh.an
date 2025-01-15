@@ -13,31 +13,31 @@ const NavbarList: FC<NavbarListProps> = ({styleName}) => {
     <div className={styleName}>
       {styleName === 'list-conteiner-mobile' &&
         <motion.div
-          className="list-title"
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 20, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.7 }}
+        className="list-title"
+        initial={{ y: 20, opacity: 0 }}
+        animate={{ y: 20, opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.7 }}
         >
-          Navigation
+        Navigation
         </motion.div>}
 
       <ul>
         {navBarItems.map((item: { number: string, label: string, href: string }, index: number) =>
           (styleName === 'list-conteiner-mobile' ? (
-            <AnimatePresence>
-              <motion.li
-                initial={{ y: 20, opacity: 1 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.9, delay: index * 0.25 }}
-              >
-                <p className="item-number">{item.number}</p>
-                <a href={item.href}>{item.label}</a>
-              </motion.li>
-            </AnimatePresence>
-          ) : (
-            <li key={index}>
+          <AnimatePresence>
+            <motion.li
+            initial={{ y: 20, opacity: 1 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.9, delay: index * 0.25 }}
+            >
+              <p className="item-number">{item.number}</p>
               <a href={item.href}>{item.label}</a>
-            </li>
+            </motion.li>
+          </AnimatePresence>
+          ) : (
+          <li key={index}>
+            <a href={item.href}>{item.label}</a>
+          </li>
           )
         ))}
       </ul>
