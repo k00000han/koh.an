@@ -21,8 +21,8 @@ const NavBarBlur: FC<MenuToggleButtonProps> = ({isMenuOpen}) => {
 				ease: [1, 1, 0.58, 1],
 				delay: 1
 				}}
-			>
-			</motion.div>}
+				>
+				</motion.div>}
 		</AnimatePresence>
 	);
 }
