@@ -21,7 +21,7 @@ const NavBar = () => {
       <DropdownAnimation isMenuOpen={isMenuOpen}>
         <NavbarList styleName={'list-conteiner-mobile'}/>
       </DropdownAnimation>
-			<NavBarBlur isMenuOpen={isMenuOpen}/>
+      <NavBarBlur isMenuOpen={isMenuOpen}/>
     </div>
   )
 }
