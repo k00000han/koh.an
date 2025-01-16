@@ -1,0 +1,13 @@
+@use "../variables" as *
+
+.cursor-object
+  width: 9px
+  height: 9px
+  position: absolute
+  z-index: 9999
+  border-radius: 100%
+  background-color: $black
+  transition: all 120ms ease-out
+
+  @media (max-width: 1000px)
+    display: none

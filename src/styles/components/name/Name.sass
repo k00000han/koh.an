@@ -1,0 +1,70 @@
+@use "../../typography" as *
+@use "../../variables" as *
+@use "../../mixins" as *
+
+.name-conteiner
+  display: flex
+  width: 100%
+  height: 600px
+
+  .name-introduction
+    position: absolute
+    left: 100px
+    top: 350px
+    z-index: 2
+
+    @media (max-width: 810px)
+      left: 16px
+
+    .name-element
+      font-size: 125px
+      font-family: $bold_font
+      color: $black
+
+      @media (max-width: 650px)
+        font-size: 50px
+
+    .specialisation-conteiner
+      display: flex
+      align-items: center
+      gap: 16px
+      font-size: 20px
+      font-family: $light_font
+      color: $gray
+      padding-left: 10px
+
+      @media (max-width: 650px)
+        font-size: 15px
+
+      .specialisation-content
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 260px
+        height: 35px
+        color: $blue
+        border: 1px $blue solid
+        border-radius: 50px
+
+        @media (max-width: 650px)
+          font-size: 15px
+          width: 203px
+          height: 28px
+
+.name-gradient-1
+  @include gradient-animation($blue, 300px, 200px, 150px, 400px, moveAround-1, 8s, (30px, 50px, 40px, 30px, 0, 10px))
+  @media (max-width: 1080px)
+    right: 50px
+    top: 100px
+    width: 250px
+    height: 250px
+    filter: blur(80px)
+
+.name-gradient-2
+  @include gradient-animation($black, 30px, 250px, 250px, 200px, moveAround-2, 8s, (20px, 50px, 40px, 20px, 0, 10px))
+  @media (max-width: 1080px)
+    right: 100px
+    top: 150px
+    width: 100px
+    height: 100px
+    filter: blur(15px)
