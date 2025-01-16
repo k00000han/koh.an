@@ -2,7 +2,7 @@
 
 .nav-bar-up-btn-container
   @media (max-width: 500px)
-    position: absolute
+    position: fixed
     left: 16px
 
   .nav-bar-up-btn
@@ -10,7 +10,8 @@
     align-items: center
     justify-content: center
     border: none
-    background: $graywhite
+    background-color: rgba(238, 238, 238, 0.5)
+    backdrop-filter: blur(1px)
     width: 45px
     height: 45px
     border-radius: 45px
