@@ -15,7 +15,7 @@ const Cursor = () => {
     document.addEventListener('mousemove', handleMouseMove);
 
     return (): void => {
-      document.removeEventListener('mousemove', handleMouseMove); // Очистка обработчика при размонтировании
+      document.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
 
