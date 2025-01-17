@@ -1,0 +1,102 @@
+@use "../../typography" as *
+@use "../../variables" as *
+@use "../../mixins" as *
+
+.text-conteiner
+  width: 100%
+  height: 500px
+  display: flex
+  justify-content: center
+  align-items: center
+  align-content: center
+  position: relative
+
+  @media (max-width: 700px)
+    height: 400px
+
+  .text-animation-conteiner
+    position: absolute
+    overflow: hidden
+    opacity: 0
+
+  .text-animation-conteiner.animate
+    opacity: 1
+
+    @media (max-width: 650px)
+      position: absolute
+      top: 20px
+
+    .text-content
+      width: 762px
+      font-size: 33px
+      font-family: $light_font
+      color: $black
+      text-align: center
+      overflow: hidden
+      @include reveal-animation(2s, reveal, cubic-bezier(0.77, 0, 0.175, 1), (0, 150%, 0, 0))
+
+      @media (max-width: 900px)
+        width: 710px
+
+      @media (max-width: 700px)
+        width: 344px
+        font-size: 20px
+
+      .text-accent
+        font-size: 35px
+        font-family: $bold_font
+        color: $blue
+
+        @media (max-width: 700px)
+          font-size: 20px
+
+  .button-animation-conteiner
+    opacity: 0
+
+  .button-animation-conteiner.animate
+    opacity: 1
+
+    .text-button-one
+      position: relative
+      background: none
+      border: none
+      @include blur-animation(2s, blurEffect, ease-in-out, 10px, 0px)
+      margin-top: 350px
+      cursor: pointer
+
+      @media (max-width: 650px)
+        margin-top: 50px
+
+      .text-button-text-one
+        font-family: $light_font
+        font-size: 19px
+        color: $blue
+
+    .text-button-two
+      width: 130px
+      height: 45px
+      display: flex
+      justify-content: center
+      align-items: center
+      position: relative
+      background: none
+      border: 1px $gray solid
+      border-radius: 100px
+      @include blur-animation(2s, blurEffect, ease-in-out, 10px, 0px)
+      transition: background-color 0.4s ease, color 1s ease
+      margin-top: 350px
+      cursor: pointer
+
+      @media (max-width: 650px)
+        margin-top: 50px
+
+      .text-button-text-two
+        font-family: $light_font
+        font-size: 24px
+        color: $gray
+
+      &:hover
+        background-color: $blue
+        border: none
+        .text-button-text-two
+          color: $white
