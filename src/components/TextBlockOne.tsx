@@ -1,5 +1,5 @@
-import TextBlock from '../shared/TextBlock';
-import meetIcon from '../../assets/icons/meet-me-button.svg';
+import TextBlock from './shared/TextBlock';
+import meetIcon from '../assets/icons/meet-me-button.svg';
 
 const TextBlockOne = () => {
   return (

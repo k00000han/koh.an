@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import '../../styles/components/name/Name.sass';
+import '../styles/components/Name.sass';
 
 const Name: FC = () => {
   return (
