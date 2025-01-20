@@ -16,7 +16,8 @@
     background-color: transparent
 
   &:not(.active)
-    background-color: $graywhite
+    background-color: rgba(238, 238, 238, 0.4)
+    backdrop-filter: blur(20px)
     transition-delay: 0.8s
 
   @media (min-width: 500px)
@@ -31,6 +32,8 @@
     z-index: 2
     -webkit-touch-callout: none
     opacity: 0
+    background-color: rgba(238, 238, 238, 0.4)
+    backdrop-filter: blur(10px)
 
   .menu-icon
     margin: auto

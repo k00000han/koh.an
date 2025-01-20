@@ -1,4 +1,4 @@
-import TextBlock from '../shared/TextBlock';
+import TextBlock from './shared/TextBlock';
 
 const TextBlockTwo = () => {
   return (
@@ -9,7 +9,7 @@ const TextBlockTwo = () => {
       btnClassName="text-button-two"
       btnTextClassName="text-button-text-two"
     />
-  )
+  );
 }
 
 export default TextBlockTwo;
