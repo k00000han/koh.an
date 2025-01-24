@@ -1,0 +1,146 @@
+@use "../typography" as *
+@use "../variables" as *
+@use "../mixins" as *
+
+.works-conteiner
+  width: 100%
+  height: 900px
+  background-color: $ash
+  position: absolute
+  overflow: hidden
+
+  @media (max-width: 750px)
+    height: 600px
+
+  .works-title-animation
+    opacity: 0
+
+  .works-title-animation.animate
+    position: relative
+    overflow: hidden
+    opacity: 1
+    width: 200px
+    height: 50px
+    top: 80px
+    left: 200px
+
+    @media (max-width: 1200px)
+      left: 50px
+    @media (max-width: 700px)
+      top: 50px
+
+    .works-title-conteiner
+      display: flex
+      align-items: center
+      width: 200px
+      height: 50px
+      gap: 13px
+      position: relative
+      @include reveal-animation(2s, reveal, cubic-bezier(0.77, 0, 0.175, 1), (0, 150%, 0, 0))
+
+      .works-title
+        font-family: $bold_font
+        font-size: 50px
+        color: $white
+
+        @media (max-width: 700px)
+          font-size: 40px
+
+  .work-items-conteiner
+    opacity: 0
+
+  .work-items-conteiner.animate
+    opacity: 1
+    display: flex
+    flex-direction: column
+    position: relative
+    width: 100%
+    top: 100px
+    left: 250px
+
+    @media (max-width: 1200px)
+      width: 700px
+      left: 50px
+
+    @media (max-width: 750px)
+      width: 335px
+      left: 50%
+      transform: translateX(-50%)
+
+    .works-item-animation
+      overflow: hidden
+
+      .works-item
+        display: flex
+        align-items: center
+        @include reveal-animation(1.5s, reveal, cubic-bezier(0.77, 0, 0.175, 1), (0, 150%, 0, 0))
+
+        .works-item-number
+          font-family: $light_font
+          font-size: 30px
+          color: $blue
+          padding-right: 20px
+
+          @media (max-width: 750px)
+            font-size: 15px
+            padding-right: 16px
+
+        .works-item-title
+          font-family: $light_font
+          font-size: 40px
+          color: $white
+          padding-right: 60px
+
+          @media (max-width: 750px)
+            font-size: 20px
+            padding-right: 16px
+
+        .works-item-type
+          font-family: $light_font
+          font-size: 30px
+          color: $gray
+          padding-right: 44px
+
+          @media (max-width: 750px)
+            font-size: 15px
+            padding-right: 16px
+
+        .works-item-link
+          display: flex
+          align-items: center
+          justify-content: center
+          font-family: $light_font
+          font-size: 24px
+          color: $gray
+          width: 115px
+          height: 35px
+          border: solid 1px $gray
+          border-radius: 50px
+          text-decoration: none
+
+          @media (max-width: 750px)
+            font-size: 15px
+            width: 72px
+            height: 24px
+
+          &:hover
+            background-color: $gray
+            border: none
+            color: $black
+
+  .star-conteiner
+    position: absolute
+    right: -350px
+    top: 15%
+
+    @media (max-width: 750px)
+      right: -225px
+      top: 15%
+
+    .star-bg
+      width: 700px
+      height: 700px
+
+      @media (max-width: 750px)
+        width: 450px
+        height: 450px
