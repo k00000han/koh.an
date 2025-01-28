@@ -1,6 +1,6 @@
-@use "../typography" as *
-@use "../variables" as *
-@use "../mixins" as *
+@use "../../typography" as *
+@use "../../variables" as *
+@use "../../mixins" as *
 
 .text-conteiner
   width: 100%
@@ -10,6 +10,7 @@
   align-items: center
   align-content: center
   position: relative
+  background-color: $black
 
   @media (max-width: 650px)
     height: 400px
@@ -31,7 +32,7 @@
       width: 762px
       font-size: 33px
       font-family: $light_font
-      color: $black
+      color: $white
       text-align: center
       overflow: hidden
       @include reveal-animation(2s, reveal, cubic-bezier(0.77, 0, 0.175, 1), (0, 150%, 0, 0))
@@ -46,7 +47,7 @@
       .text-accent
         font-size: 35px
         font-family: $bold_font
-        color: $blue
+        color: $purple
 
         @media (max-width: 700px)
           font-size: 20px
@@ -97,7 +98,7 @@
         color: $gray
 
       &:hover
-        background-color: $blue
+        background-color: $purple
         border: none
         .text-button-text-two
-          color: $white
+          color: $black

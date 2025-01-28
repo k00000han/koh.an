@@ -1,4 +1,4 @@
-import TextBlock from './shared/TextBlock';
+import TextBlock from './TextBlock';
 
 const TextBlockTwo = () => {
   return (

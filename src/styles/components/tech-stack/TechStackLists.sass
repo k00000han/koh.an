@@ -1,0 +1,27 @@
+@use "../../base" as *
+
+.tech-stack-lists
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-gap: 300px
+  position: absolute
+  top: 60%
+  left: 55%
+  transform: translate(-50%, -50%)
+
+  @media (max-width: 940px)
+    top: 60%
+    left: 55%
+    grid-gap: 10px
+
+  @media (max-width: 700px)
+    display: grid
+    grid-template-columns: 1fr
+    grid-gap: 50px
+    top: 55%
+    left: 55%
+
+  .front-end-list
+    @extend %tech-stack-list-base
+  .back-end-list
+    @extend %tech-stack-list-base

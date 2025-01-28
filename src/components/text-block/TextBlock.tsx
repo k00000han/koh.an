@@ -1,7 +1,7 @@
 import React from 'react';
 import useOBS from '../../utils/useOBS';
 
-import '../../styles/components/TextBlock.sass';
+import '../../styles/components/text-block/TextBlock.sass';
 
 interface TextBlockProps {
   textPart1: string;

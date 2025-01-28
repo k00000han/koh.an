@@ -1,10 +1,12 @@
 import Cursor from './components/Cursor';
 import NavBar from './components/navbar/NavBar';
-import Name from './components/Name';
-import TextBlockOne from './components/TextBlockOne';
-import TeckStack from './components/TeckStack';
-import TextBlockTwo from './components/TextBlockTwo';
-import Works from './components/Works';
+import Name from './components/name/Name.tsx';
+import TextBlockOne from './components/text-block/TextBlockOne.tsx';
+import TeckStack from './components/tech-stack/TeckStack.tsx';
+import TextBlockTwo from './components/text-block/TextBlockTwo.tsx';
+import Works from './components/works/Works.tsx';
+import AboutMe from './components/about-me/AboutMe.tsx';
+import Footer from './components/footer/Footer.tsx';
 
 import './styles/global.sass';
 
@@ -14,10 +16,12 @@ function App() {
       <Cursor/>
       <NavBar/>
       <Name/>
-      <TextBlockOne/>
+      {/*<TextBlockOne/>*/}
       <TeckStack/>
       <TextBlockTwo/>
       <Works/>
+      <AboutMe/>
+      <Footer/>
     </>
   )
 }

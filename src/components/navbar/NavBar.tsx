@@ -4,14 +4,14 @@ import NavBarBlur from './NavBarBlur';
 import NavBarUpButton from './NavBarUpButton';
 import DropdownAnimation from './NavbarAnimation';
 import NavbarToggleButton from './NavbarToggleButton';
-import useNoScroll from '../../utils/useNoScroll';
+import { noScroll } from '../../utils/scrollTools';
 
 import '../../styles/components/navbar/NavBar.sass';
 
 const NavBar = () => {
   const [isMenuOpen, setMenuIsOpen] = useState(false);
   const toggleOpen = (): void => {setMenuIsOpen(!isMenuOpen);};
-  useNoScroll(isMenuOpen);
+  noScroll(isMenuOpen);
 
   return (
     <div className="navbar-conteiner">
