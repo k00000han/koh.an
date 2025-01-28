@@ -1,0 +1,45 @@
+@use "../../typography" as *
+@use "../../variables" as *
+@use "../../mixins" as *
+
+.about-me-title-animation
+    opacity: 0
+
+.about-me-title-animation.animate
+  position: absolute
+  opacity: 1
+  overflow: hidden
+  top: 30px
+  left: 200px
+
+  @media (max-width: 1200px)
+    left: 50px
+  @media (max-width: 700px)
+    top: 50px
+    left: 16px
+
+  .about-me-title-conteiner
+    display: flex
+    align-items: center
+    gap: 18px
+    @include reveal-animation(2.5s, reveal, cubic-bezier(0.77, 0, 0.175, 1), (0, 150%, 0, 0))
+
+    @media (max-width: 700px)
+      gap: 16px
+
+    .about-me-title
+      font-family: $bold_font
+      font-size: 50px
+      color: $purple
+      margin: 0
+
+      @media (max-width: 700px)
+        font-size: 30px
+
+    .about-me-title-img
+      width: 30px
+      height: 30px
+
+      @media (max-width: 700px)
+        width: 20px
+        height: 20px

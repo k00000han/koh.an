@@ -1,0 +1,39 @@
+@use "../../typography" as *
+@use "../../variables" as *
+@use "../../mixins" as *
+
+
+.works-title-animation
+    opacity: 0
+
+.works-title-animation.animate
+  position: relative
+  overflow: hidden
+  opacity: 1
+  width: 200px
+  height: 50px
+  top: 80px
+  left: 200px
+
+  @media (max-width: 1200px)
+    left: 50px
+  @media (max-width: 700px)
+    top: 50px
+    left: 16px
+
+  .works-title-conteiner
+    display: flex
+    align-items: center
+    width: 200px
+    height: 50px
+    gap: 13px
+    position: relative
+    @include reveal-animation(3s, reveal, cubic-bezier(0.77, 0, 0.175, 1), (0, 150%, 0, 0))
+
+    .works-title
+      font-family: $bold_font
+      font-size: 50px
+      color: $white
+
+      @media (max-width: 700px)
+        font-size: 40px

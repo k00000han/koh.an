@@ -2,6 +2,8 @@ import React from 'react';
 import useOBS from '../../utils/useOBS';
 import { techStack, techStackItems } from '../../constants/techStackItems';
 
+import '../../styles/components/tech-stack/TechStackLists.sass';
+
 interface TechStackListProps {
   listStyleName: string;
   list: techStack;

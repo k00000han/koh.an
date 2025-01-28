@@ -1,24 +1,25 @@
 import { FC } from 'react';
+import Animation from './Animation';
+import { nameItems } from '../../constants/nameItems'
 
-import '../styles/components/Name.sass';
+import '../../styles/components/name/Name.sass';
 
 const Name: FC = () => {
   return (
-    <div className="name-conteiner">
+    <div className="name-conteiner" id="name">
       <div className="name-introduction">
         <div className="name-animation-conteiner">
           <div className="name-element">
-            Kohan<br />
-            Constantin
+            {nameItems.surname}<br />
+            {nameItems.name}
           </div>
           <div className="specialisation-conteiner">
             <p className="specialisation-title">Specialisation:</p>
-            <div className="specialisation-content">Full-Stack Software Engineer</div>
+            <div className="specialisation-content">{nameItems.specialisation}</div>
           </div>
         </div>
       </div>
-      <div className="name-gradient-1"></div>
-      <div className="name-gradient-2"></div>
+      <Animation/>
     </div>
   );
 }

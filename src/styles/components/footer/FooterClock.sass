@@ -1,0 +1,76 @@
+@use "../../typography" as *
+@use "../../variables" as *
+@use "../../mixins" as *
+
+.clock-conteiner-animation
+    opacity: 0
+
+.clock-conteiner-animation.animate
+  width: 410px
+  height: 70px
+  opacity: 1
+  overflow: hidden
+  position: absolute
+  left: 200px
+  bottom: 50px
+
+  @media (max-width: 1200px)
+    left: 50px
+    bottom: 60px
+
+  .clock-conteiner
+    display: flex
+    align-items: center
+    position: absolute
+    gap: 50px
+    @include reveal-animation(3s, reveal, cubic-bezier(0.77, 0, 0.175, 1), (0, 150%, 0, 0))
+
+    .clock-indicator
+      display: flex
+      justify-content: center
+      align-items: center
+
+      .blinking-dot
+        position: absolute
+        width: 10px
+        height: 10px
+        background-color: $purple
+        border-radius: 50%
+        animation: blink 1s infinite
+
+      @keyframes blink
+        0%
+          opacity: 1
+        25%
+          opacity: 0
+        50%
+          opacity: 0
+        75%
+          opacity: 0
+        100%
+          opacity: 1
+
+    .clock-text-conteiner
+      display: flex
+      flex-direction: column
+      align-items: center
+      gap: 10px
+      overflow: hidden
+
+      .clock
+        font-family: $bold_font
+        font-size: 30px
+        color: $gray
+        margin: 0
+
+        @media (max-width: 700px)
+          font-size: 20px
+
+      .schedule
+        font-family: $light_font
+        font-size: 15px
+        color: $gray
+        margin: 0
+
+        @media (max-width: 700px)
+          font-size: 12px

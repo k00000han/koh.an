@@ -1,14 +1,16 @@
 @use "../variables" as *
 
 .cursor-object
-  width: 9px
-  height: 9px
+  width: 20px
+  height: 20px
+  border: solid 1px $white
   position: fixed
   z-index: 9999
   border-radius: 100%
-  background-color: $black
+  //background-color: $white
   pointer-events: none
   transition: all 120ms ease-out
+  mix-blend-mode: difference
 
   @media (max-width: 1000px)
     display: none
