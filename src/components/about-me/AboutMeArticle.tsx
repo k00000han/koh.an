@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import DisappearAnimation from '../animations/DisappearAnimation';
+import RevealAnimation from '../animations/RevealAnimation';
 
 import '../../styles/components/about-me/AboutMeArticle.sass';
 
@@ -11,9 +11,9 @@ interface AboutMeArticleProps {
 const AboutMeArticle: FC<AboutMeArticleProps> = ({text}) => {
   return (
     <div className="about-me-text-conteiner">
-      <DisappearAnimation styleName="about-me-text-animation">
+      <RevealAnimation styleName="about-me-text-animation">
         <div className="about-me-text" dangerouslySetInnerHTML={{ __html: text }} />
-      </DisappearAnimation>
+      </RevealAnimation>
     </div>
   );
 };
