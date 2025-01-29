@@ -1,16 +1,14 @@
-import useOBS from '../../utils/useOBS';
+import RevealAnimation from '../animations/RevealAnimation';
 
 import '../../styles/components/tech-stack/TechStackTitle.sass';
 
 const TeckStackTitle = () => {
-   const textBlockRef = useOBS();
-
   return (
-    <div className="tech-stack-title-animation" ref={textBlockRef}>
-      <div className="tech-stack-title-conteiner">
+    <div className="tech-stack-title-conteiner">
+      <RevealAnimation styleName="tech-stack-title-animation">
         <span className="tech-stack-title-1">My</span>
         <span className="tech-stack-title-2">Tech Stack</span>
-      </div>
+      </RevealAnimation>
     </div>
   );
 }

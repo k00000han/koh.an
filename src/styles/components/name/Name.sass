@@ -1,6 +1,5 @@
 @use "../../typography" as *
 @use "../../variables" as *
-@use "../../mixins" as *
 
 .name-conteiner
   display: flex
@@ -22,8 +21,6 @@
       left: 16px
 
     .name-animation-conteiner
-      @include reveal-animation(1.5s, reveal, cubic-bezier(0.77, 0, 0.175, 1), (0, 150%, 0, 0))
-
       .name-element
         font-size: 125px
         font-family: $bold_font

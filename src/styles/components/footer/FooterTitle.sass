@@ -1,11 +1,7 @@
 @use "../../typography" as *
 @use "../../variables" as *
-@use "../../mixins" as *
 
 .footer-title-animation
-    opacity: 0
-
-.footer-title-animation.animate
   position: absolute
   opacity: 1
   overflow: hidden
@@ -19,8 +15,6 @@
     left: 16px
 
   .footer-title-conteiner
-    @include reveal-animation(2.5s, reveal, cubic-bezier(0.77, 0, 0.175, 1), (0, 150%, 0, 0))
-
     .footer-title
       font-family: $light_font
       font-size: 70px

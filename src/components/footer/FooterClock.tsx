@@ -1,5 +1,5 @@
 import { FC, useEffect, useState } from 'react';
-import useOBS from '../../utils/useOBS';
+import RevealAnimation from '../animations/RevealAnimation';
 import { getTime } from '../../utils/time';
 
 import '../../styles/components/footer/FooterClock.sass';
@@ -10,7 +10,6 @@ interface FooterClockProps {
 }
 
 const FooterClock: FC<FooterClockProps> = ({logo, schedule}) => {
-  const timeRef = useOBS();
   const [time, setTime] = useState<string>(getTime());
 
   useEffect(() => {
@@ -22,8 +21,8 @@ const FooterClock: FC<FooterClockProps> = ({logo, schedule}) => {
   }, []);
 
   return (
-    <div className="clock-conteiner-animation" ref={timeRef}>
-      <div className="clock-conteiner">
+    <div className="clock-conteiner">
+      <RevealAnimation styleName="clock-conteiner-animation">
         <div className="clock-indicator">
           <img src={logo} alt="img" className="footer-logo" />
           <div className="blinking-dot"></div>
@@ -32,7 +31,7 @@ const FooterClock: FC<FooterClockProps> = ({logo, schedule}) => {
           <p className="clock">{time}</p>
           <p className="schedule">{schedule}</p>
         </div>
-      </div>
+      </RevealAnimation>
     </div>
   );
 };

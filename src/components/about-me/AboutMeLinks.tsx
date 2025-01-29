@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import useOBS from '../../utils/useOBS';
+import RevealAnimation from '../animations/RevealAnimation';
 
 import '../../styles/components/about-me/AboutMeLinks.sass';
 
@@ -11,18 +11,16 @@ interface AboutMeLinksProps {
 }
 
 const AboutMeLinks: FC<AboutMeLinksProps> = ({link_one, link_one_icon, link_two, link_two_icon}) => {
-  const linksRef = useOBS();
-
   return (
-    <div className="about-me-links-animation" ref={linksRef}>
-      <div className="about-me-links-conteiner">
+    <div className="about-me-links-conteiner">
+      <RevealAnimation styleName="about-me-links-animation">
         <a className="bandcamp-link" href={link_one}>
           <img className="bandcamp-logo" src={link_one_icon} alt="img" />
         </a>
         <a className="github-link" href={link_two}>
           <img className="github-logo" src={link_two_icon} alt="img" />
         </a>
-      </div>
+      </RevealAnimation>
     </div>
   );
 };

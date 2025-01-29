@@ -1,11 +1,7 @@
 @use "../../typography" as *
 @use "../../variables" as *
-@use "../../mixins" as *
 
-.about-me-links-animation
-    opacity: 0
-
-.about-me-links-animation.animate
+.about-me-links-conteiner
   position: absolute
   opacity: 1
   overflow: hidden
@@ -14,16 +10,16 @@
 
   @media (max-width: 1200px)
     right: 50px
+
   @media (max-width: 700px)
     top: 60px
     right: 16px
 
-  .about-me-links-conteiner
+  .about-me-links-animation
     display: flex
-    align-items: center
-    justify-content: center
+    align-content: center
     gap: 30px
-    @include reveal-animation(3s, reveal, cubic-bezier(0.77, 0, 0.175, 1), (0, 150%, 0, 0))
+
     @media (max-width: 700px)
       gap: 16px
 
@@ -36,6 +32,7 @@
         @media (max-width: 700px)
           width: 80px
           height: 14px
+
     .github-logo
       @media (max-width: 700px)
         width: 40px

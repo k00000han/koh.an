@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import useOBS from '../../utils/useOBS';
+import RevealAnimation from '../animations/RevealAnimation';
 
 import '../../styles/components/about-me/AboutMeTitle.sass';
 
@@ -9,14 +9,13 @@ interface AboutMeTitleProps {
 }
 
 const AboutMeTitle: FC<AboutMeTitleProps> = ({title, title_icon}) => {
-  const titleRef = useOBS();
 
   return (
-    <div className="about-me-title-animation" ref={titleRef}>
-      <div className="about-me-title-conteiner">
+    <div className="about-me-title-conteiner">
+      <RevealAnimation styleName="about-me-title-animation">
         <p className="about-me-title">{title}</p>
         <img className="about-me-title-img" src={title_icon} alt="img" />
-      </div>
+      </RevealAnimation>
     </div>
   );
 };

@@ -1,10 +1,7 @@
 @use "../../typography" as *
 @use "../../variables" as *
-@use "../../mixins" as *
 
 .social-nets-conteiner-animation
-    opacity: 0
-.social-nets-conteiner-animation.animate
   opacity: 1
   position: absolute
   right: 300px
@@ -16,8 +13,6 @@
     top: 150px
 
   .social-nets-conteiner
-    @include blur-animation(2s, blurEffect, ease, 16px, 0px)
-    
     .social-nets-link
       overflow: hidden
       text-decoration: none

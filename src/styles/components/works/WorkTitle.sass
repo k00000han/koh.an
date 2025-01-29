@@ -1,12 +1,8 @@
 @use "../../typography" as *
 @use "../../variables" as *
-@use "../../mixins" as *
 
 
 .works-title-animation
-    opacity: 0
-
-.works-title-animation.animate
   position: relative
   overflow: hidden
   opacity: 1
@@ -28,7 +24,6 @@
     height: 50px
     gap: 13px
     position: relative
-    @include reveal-animation(3s, reveal, cubic-bezier(0.77, 0, 0.175, 1), (0, 150%, 0, 0))
 
     .works-title
       font-family: $bold_font

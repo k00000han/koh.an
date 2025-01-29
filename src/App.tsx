@@ -1,28 +1,27 @@
 import Cursor from './components/Cursor';
 import NavBar from './components/navbar/NavBar';
-import Name from './components/name/Name.tsx';
-import TextBlockOne from './components/text-block/TextBlockOne.tsx';
-import TeckStack from './components/tech-stack/TeckStack.tsx';
-import TextBlockTwo from './components/text-block/TextBlockTwo.tsx';
-import Works from './components/works/Works.tsx';
-import AboutMe from './components/about-me/AboutMe.tsx';
-import Footer from './components/footer/Footer.tsx';
+import Name from './components/name/Name';
+import TeckStack from './components/tech-stack/TeckStack';
+import TextBlock from './components/text-block/TextBlock';
+import Works from './components/works/Works';
+import AboutMe from './components/about-me/AboutMe';
+import Footer from './components/footer/Footer';
+import { ReactLenis } from '@studio-freight/react-lenis'
 
 import './styles/global.sass';
 
-function App() {
+function App(): JSX.Element {
   return(
-    <>
+    <ReactLenis root>
       <Cursor/>
       <NavBar/>
       <Name/>
-      {/*<TextBlockOne/>*/}
       <TeckStack/>
-      <TextBlockTwo/>
+      <TextBlock/>
       <Works/>
       <AboutMe/>
       <Footer/>
-    </>
+    </ReactLenis>
   )
 }
 

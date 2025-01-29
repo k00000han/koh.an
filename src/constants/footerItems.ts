@@ -23,7 +23,7 @@ export const footerItems: footerItem =
     social_nets: [
       {
         title: "E-Mail",
-        url: "mailto:kohan.xxxxx@gmail.com",
+        url: "mailto:constantin.kohan@gmail.com",
       },
       {
         title: "LinkedIn",

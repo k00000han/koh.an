@@ -1,6 +1,5 @@
 @use "../../typography" as *
 @use "../../variables" as *
-@use "../../mixins" as *
 
 .text-conteiner
   width: 100%
@@ -11,6 +10,7 @@
   align-content: center
   position: relative
   background-color: $black
+  overflow: hidden
 
   @media (max-width: 650px)
     height: 400px
@@ -18,14 +18,10 @@
   .text-animation-conteiner
     position: absolute
     overflow: hidden
-    opacity: 0
+    opacity: 1
     top: 120px
 
-  .text-animation-conteiner.animate
-    opacity: 1
-
     @media (max-width: 650px)
-      position: absolute
       top: 100px
 
     .text-content
@@ -35,7 +31,6 @@
       color: $white
       text-align: center
       overflow: hidden
-      @include reveal-animation(2s, reveal, cubic-bezier(0.77, 0, 0.175, 1), (0, 150%, 0, 0))
 
       @media (max-width: 900px)
         width: 710px
@@ -53,16 +48,12 @@
           font-size: 20px
 
   .button-animation-conteiner
-    opacity: 0
-
-  .button-animation-conteiner.animate
     opacity: 1
 
     .text-button-one
       position: relative
       background: none
       border: none
-      @include blur-animation(2s, blurEffect, ease-in-out, 10px, 0px)
       margin-top: 200px
       cursor: pointer
 
@@ -84,7 +75,6 @@
       background: none
       border: 1px $gray solid
       border-radius: 100px
-      @include blur-animation(2s, blurEffect, ease-in-out, 10px, 0px)
       transition: background-color 0.4s ease, color 1s ease
       margin-top: 200px
       cursor: pointer

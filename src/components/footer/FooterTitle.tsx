@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import useOBS from '../../utils/useOBS';
+import RevealAnimation from '../animations/RevealAnimation';
 
 import '../../styles/components/footer/FooterTitle.sass';
 
@@ -8,14 +8,12 @@ interface FooterTitleProps {
 }
 
 const FooterTitle: FC<FooterTitleProps> = ({title}) => {
-  const titleRef = useOBS();
-
   return (
-    <div className="footer-title-animation" ref={titleRef}>
+    <RevealAnimation styleName="footer-title-animation">
       <div className="footer-title-conteiner">
         <p className="footer-title">{title}</p>
       </div>
-    </div>
+    </RevealAnimation>
   );
 };
 
