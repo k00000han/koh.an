@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import {AnimatePresence, motion} from 'framer-motion';
+import {AnimatePresence, motion} from 'motion/react';
 
 import '../../styles/components/navbar/NavBarBlur.sass';
 
