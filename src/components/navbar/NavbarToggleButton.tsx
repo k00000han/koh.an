@@ -1,22 +1,19 @@
-import React, { FC, useState } from 'react';
+import React, { FC } from 'react';
 
 import '../../styles/components/navbar/NavbarButton.sass';
 
 interface MenuToggleButtonProps {
   toggleOpen: () => void;
+  isMenuOpen: boolean;
 }
 
-const NavbarToggleButton: FC<MenuToggleButtonProps> = ({ toggleOpen }) => {
-  const [isActive, setIsActive] = useState(false);
-
-  const handleClick = (): void => {
-    setIsActive(!isActive);
-    toggleOpen();
-  };
-
+const NavbarToggleButton: FC<MenuToggleButtonProps> = ({ toggleOpen, isMenuOpen }) => {
   return (
-    <div className={`menu-icon-conteiner ${isActive ? 'active' : ''}`} onClick={handleClick}>
-      <input className="menu-icon_tumbler" type="checkbox" onClick={toggleOpen} />
+    <div
+      className={`menu-icon-conteiner ${isMenuOpen ? 'active' : ''}`}
+      onClick={toggleOpen}
+    >
+      <input className="menu-icon_tumbler" type="checkbox" checked={isMenuOpen} readOnly />
       <div className="menu-icon">
         <span className="menu-icon-element"></span>
         <span className="menu-icon-element"></span>

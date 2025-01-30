@@ -21,8 +21,8 @@ const TechStackList: React.FC<TechStackListProps> = ({ listStyleName,  list }) =
       </RevealAnimation>
 
       <div className="tech-list-items-conteiner">
-        {list.items.map((item: techStackItems) => (
-          <DisappearAnimation styleName="tech-list-item-animation">
+        {list.items.map((item: techStackItems, index) => (
+          <DisappearAnimation styleName="tech-list-item-animation" key={index}>
             <div className="tech-list-item">
               <img className="tech-list-item-img" src={item.name_icon} alt="img" />
               {item.name}

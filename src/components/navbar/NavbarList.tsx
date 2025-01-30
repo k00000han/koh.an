@@ -1,5 +1,5 @@
 import {FC} from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'motion/react';
 import {navBarItems} from '../../constants/navBarItems';
 import { scrollToSection } from '../../utils/scrollTools';
 
@@ -7,9 +7,10 @@ import '../../styles/components/navbar/NavBarList.sass';
 
 interface NavbarListProps {
   styleName: string;
+  toggleOpen: () => void;
 }
 
-const NavbarList: FC<NavbarListProps> = ({styleName}) => {
+const NavbarList: FC<NavbarListProps> = ({styleName, toggleOpen}) => {
   return (
     <div className={styleName}>
       {styleName === 'list-conteiner-mobile' &&
@@ -25,14 +26,16 @@ const NavbarList: FC<NavbarListProps> = ({styleName}) => {
       <ul>
         {navBarItems.map((item: { number: string, label: string, href: string }, index: number) =>
           (styleName === 'list-conteiner-mobile' ? (
-          <AnimatePresence>
+          <AnimatePresence key={index}>
             <motion.li
               initial={{ y: 20, opacity: 1 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.9, delay: index * 0.25 }}
             >
               <p className="item-number">{item.number}</p>
-              <a onClick={() => scrollToSection(item.href)}>{item.label}</a>
+              <a onClick={() => {scrollToSection(item.href); toggleOpen();}}>
+                {item.label}
+              </a>
             </motion.li>
           </AnimatePresence>
             ) : (

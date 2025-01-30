@@ -9,8 +9,8 @@ const WorkItemList: FC = () => {
   return (
     <div className="work-items-conteiner">
       {worksItems.map((item: { number: string, title: string, type: string, link: string, linkTitle: string }, index: number) =>
-          <DisappearAnimation styleName="works-item-animation">
-            <div className="works-item" key={index}>
+          <DisappearAnimation styleName="works-item-animation" key={index}>
+            <div className="works-item">
               <p className="works-item-number">{item.number}</p>
               <p className="works-item-title">{item.title}</p>
               <p className="works-item-type">{item.type}</p>

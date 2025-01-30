@@ -4,9 +4,9 @@ import NavBarBlur from './NavBarBlur';
 import NavBarUpButton from './NavBarUpButton';
 import DropdownAnimation from './NavbarAnimation';
 import NavbarToggleButton from './NavbarToggleButton';
-import { noScroll } from '../../utils/scrollTools';
 
 import '../../styles/components/navbar/NavBar.sass';
+import { noScroll } from '../../utils/scrollTools';
 
 const NavBar = () => {
   const [isMenuOpen, setMenuIsOpen] = useState(false);
@@ -16,10 +16,10 @@ const NavBar = () => {
   return (
     <div className="navbar-conteiner">
       <NavBarUpButton/>
-      <NavbarList styleName={'list-conteiner'}/>
-      <NavbarToggleButton toggleOpen={toggleOpen}/>
+      <NavbarList styleName={'list-conteiner'} toggleOpen={toggleOpen}/>
+      <NavbarToggleButton isMenuOpen={isMenuOpen} toggleOpen={toggleOpen} />
       <DropdownAnimation isMenuOpen={isMenuOpen}>
-        <NavbarList styleName={'list-conteiner-mobile'}/>
+        <NavbarList styleName={'list-conteiner-mobile'} toggleOpen={toggleOpen}/>
       </DropdownAnimation>
       <NavBarBlur isMenuOpen={isMenuOpen}/>
     </div>
