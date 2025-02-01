@@ -12,16 +12,20 @@ import './styles/global.sass';
 
 function App(): JSX.Element {
   return(
-    <ReactLenis root>
+    <>
       <Cursor/>
-      <NavBar/>
-      <Name/>
-      <TeckStack/>
-      <TextBlock/>
-      <Works/>
-      <AboutMe/>
-      <Footer/>
-    </ReactLenis>
+      <main>
+        <ReactLenis root>
+          <NavBar/>
+          <Name/>
+          <TeckStack/>
+          <TextBlock/>
+          <Works/>
+          <AboutMe/>
+          <Footer/>
+        </ReactLenis>
+      </main>
+    </>
   )
 }
 

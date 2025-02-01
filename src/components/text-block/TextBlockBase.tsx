@@ -12,6 +12,7 @@ interface TextBlockProps {
   imgSrc?: string;
   btnClassName: string;
   btnTextClassName: string;
+  cvPath: string;
 }
 
 const TextBlockBase: React.FC<TextBlockProps> = (
@@ -22,7 +23,8 @@ const TextBlockBase: React.FC<TextBlockProps> = (
     buttonText,
     imgSrc,
     btnClassName,
-    btnTextClassName
+    btnTextClassName,
+    cvPath
   }) => {
 
   return (
@@ -35,7 +37,10 @@ const TextBlockBase: React.FC<TextBlockProps> = (
         </RevealAnimation>
       </div>
       <DisappearAnimation styleName="button-animation-conteiner">
-        <button className={btnClassName}>
+        <button
+          className={btnClassName}
+          onClick={() => window.open(cvPath, '_blank')}
+        >
           <p className={btnTextClassName}>{buttonText}</p>
           {imgSrc && <img className="text-button-img" src={imgSrc} alt="img" />}
         </button>

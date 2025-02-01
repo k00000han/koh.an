@@ -4,15 +4,16 @@ import WorkItemList from './WorkItemList';
 import star_bg from '../../assets/icons/works-star-bg.svg';
 
 import '../../styles/components/works/Works.sass';
+import RotateAnimation from '../animations/RotateAnimation';
 
 const Works: FC = () => {
   return (
     <div className="works-conteiner" id="works">
       <WorkTitle/>
       <WorkItemList/>
-      <div className="star-conteiner">
+      <RotateAnimation styleName="star-conteiner">
         <img className="star-bg" src={star_bg} alt="img" />
-      </div>
+      </RotateAnimation>
     </div>
   );
 }

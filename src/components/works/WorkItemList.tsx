@@ -14,7 +14,9 @@ const WorkItemList: FC = () => {
               <p className="works-item-number">{item.number}</p>
               <p className="works-item-title">{item.title}</p>
               <p className="works-item-type">{item.type}</p>
-              <a className="works-item-link" href={item.link}>{item.linkTitle}</a>
+              <a className="works-item-link" onClick={() => window.open(item.link, '_blank')}>
+                {item.linkTitle}
+              </a>
             </div>
           </DisappearAnimation>
       )}

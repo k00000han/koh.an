@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { noScroll } from '../../utils/scrollTools';
 import NavbarList from './NavbarList';
 import NavBarBlur from './NavBarBlur';
 import NavBarUpButton from './NavBarUpButton';
@@ -6,7 +7,6 @@ import DropdownAnimation from './NavbarAnimation';
 import NavbarToggleButton from './NavbarToggleButton';
 
 import '../../styles/components/navbar/NavBar.sass';
-import { noScroll } from '../../utils/scrollTools';
 
 const NavBar = () => {
   const [isMenuOpen, setMenuIsOpen] = useState(false);
