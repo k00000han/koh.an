@@ -13,12 +13,12 @@ interface TechStackListProps {
 const TechStackList: React.FC<TechStackListProps> = ({ listStyleName,  list }) => {
   return (
     <div className={listStyleName}>
-      <RevealAnimation styleName="tech-list-title-animation">
-        <div className="tech-list-title-conteiner">
+      <div className="tech-list-title-animation">
+        <RevealAnimation styleName="tech-list-title-conteiner">
           <p className="tech-list-title">{list.title}</p>
           <img className="tech-list-title-img" src={list.title_icon} alt="" />
-        </div>
-      </RevealAnimation>
+        </RevealAnimation>
+      </div>
 
       <div className="tech-list-items-conteiner">
         {list.items.map((item: techStackItems, index) => (

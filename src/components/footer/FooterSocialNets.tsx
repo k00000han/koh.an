@@ -13,7 +13,14 @@ const FooterSocialNets: FC<FooterSocialNetsProps> = ({social_nets}) => {
     <div className="social-nets-conteiner-animation">
       {social_nets.map((item, index: number) =>
         <RevealAnimation styleName="social-nets-conteiner" key={index}>
-          <a className="social-nets-link" href={item.url}>{item.title}</a>
+          <a
+            className="social-nets-link"
+            href={item.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {item.title}
+          </a>
         </RevealAnimation>
       )}
     </div>
