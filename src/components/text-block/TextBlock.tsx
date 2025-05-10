@@ -8,7 +8,7 @@ const TextBlock = () => {
       buttonText="Check CV"
       btnClassName="text-button-two"
       btnTextClassName="text-button-text-two"
-      cvPath="/CV.pdf"
+      cvPath="/Constantin_Kohan_CV.pdf"
     />
   );
 }
